@@ -39,3 +39,6 @@ x86/
 # OS files
 .DS_Store
 Thumbs.db
+
+# Local test scratch files
+test-temp/

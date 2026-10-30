@@ -1,0 +1,136 @@
+Project tree (generated; Git/IDE caches and build output omitted)
+littlechat/
+|-- client/
+|   \-- CMakeLists.txt
+|-- cmake/
+|   \-- LinuxDependencies.cmake
+|-- docs/
+|   |-- screenshots/
+|   |   |-- chat.png
+|   |   |-- compact.png
+|   |   \-- main.png
+|   |-- architecture.md
+|   |-- benchmark.md
+|   |-- client-ui.md
+|   |-- database.md
+|   |-- dependencies.md
+|   |-- interview-notes.md
+|   |-- progress.md
+|   |-- project-tree.txt
+|   |-- protocol.md
+|   \-- roadmap.md
+|-- protocol/
+|   |-- include/
+|   |   \-- littlechat/
+|   |       \-- protocol/
+|   |           |-- envelope.h
+|   |           \-- frame.h
+|   |-- src/
+|   |   |-- envelope.cpp
+|   |   \-- frame.cpp
+|   |-- tests/
+|   |   \-- tst_protocol.cpp
+|   |-- chat.proto
+|   |-- CMakeLists.txt
+|   \-- README.md
+|-- resources/
+|   |-- icons/
+|   |   |-- back.svg
+|   |   |-- bag.svg
+|   |   |-- call.svg
+|   |   |-- chat.svg
+|   |   |-- check.svg
+|   |   |-- close.svg
+|   |   |-- cloud.svg
+|   |   |-- folder.svg
+|   |   |-- grid.svg
+|   |   |-- heart.svg
+|   |   |-- history.svg
+|   |   |-- image.svg
+|   |   |-- mail.svg
+|   |   |-- maximize.svg
+|   |   |-- menu.svg
+|   |   |-- minimize.svg
+|   |   |-- more.svg
+|   |   |-- phone.svg
+|   |   |-- pin.svg
+|   |   |-- plus.svg
+|   |   |-- restore.svg
+|   |   |-- search.svg
+|   |   |-- send.svg
+|   |   |-- shirt.svg
+|   |   |-- smile.svg
+|   |   |-- star.svg
+|   |   |-- user.svg
+|   |   \-- video.svg
+|   |-- images/
+|   |   \-- .gitkeep
+|   |-- styles/
+|   |   \-- light.qss
+|   \-- resources.qrc
+|-- scripts/
+|   |-- build.ps1
+|   |-- fetch-linux-deps.sh
+|   \-- update-tree.ps1
+|-- server/
+|   |-- cmake/
+|   |   \-- Muduo.cmake
+|   |-- patches/
+|   |   \-- muduo-stop-accepting.patch
+|   |-- src/
+|   |   |-- concurrency/
+|   |   |   |-- boundedthreadpool.cpp
+|   |   |   \-- boundedthreadpool.h
+|   |   |-- network/
+|   |   |   |-- diagnosticserver.cpp
+|   |   |   \-- diagnosticserver.h
+|   |   \-- main.cpp
+|   |-- tests/
+|   |   |-- tst_server_integration.cpp
+|   |   \-- tst_threadpool.cpp
+|   |-- CMakeLists.txt
+|   \-- README.md
+|-- src/
+|   |-- app/
+|   |   \-- main.cpp
+|   |-- core/
+|   |   |-- controllers/
+|   |   |   |-- chatcontroller.cpp
+|   |   |   \-- chatcontroller.h
+|   |   |-- models/
+|   |   |   |-- conversation.h
+|   |   |   \-- message.h
+|   |   \-- storage/
+|   |       |-- chatstore.cpp
+|   |       \-- chatstore.h
+|   |-- platform/
+|   |   \-- window/
+|   |       |-- framelesswindow.cpp
+|   |       \-- framelesswindow.h
+|   \-- ui/
+|       |-- graphics/
+|       |   |-- icons.cpp
+|       |   |-- icons.h
+|       |   |-- resources.cpp
+|       |   \-- resources.h
+|       |-- widgets/
+|       |   |-- captionbutton.cpp
+|       |   |-- captionbutton.h
+|       |   |-- conversationdelegate.cpp
+|       |   |-- conversationdelegate.h
+|       |   |-- messagebubble.cpp
+|       |   \-- messagebubble.h
+|       \-- windows/
+|           |-- mainwindow.cpp
+|           \-- mainwindow.h
+|-- tests/
+|   |-- tst_chatstore.cpp
+|   |-- tst_mainwindow.cpp
+|   \-- tst_window_win.cpp
+|-- .clang-format
+|-- .gitattributes
+|-- .gitignore
+|-- AGENTS.md
+|-- CMakeLists.txt
+|-- CMakePresets.json
+\-- README.md

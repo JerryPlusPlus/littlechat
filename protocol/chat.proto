@@ -1,0 +1,61 @@
+syntax = "proto3";
+package littlechat.wire;
+
+// P2 implements only HELLO, PING and diagnostic ECHO. Business types are reserved for later milestones.
+enum MessageType {
+  MESSAGE_TYPE_UNSPECIFIED = 0;
+  HELLO_REQUEST = 1;
+  HELLO_RESPONSE = 2;
+  PING = 3;
+  PONG = 4;
+  ECHO_REQUEST = 5;
+  ECHO_RESPONSE = 6;
+  ERROR_RESPONSE = 7;
+  REGISTER = 10;
+  LOGIN = 11;
+  LOGOUT = 12;
+  SEND_TEXT = 20;
+  PERSISTED_ACK = 21;
+  MESSAGE_PUSH = 22;
+  DELIVERY_ACK = 23;
+  READ_ACK = 24;
+  SYNC_EVENTS = 25;
+}
+enum ErrorCode {
+  OK = 0;
+  BAD_REQUEST = 1;
+  HANDSHAKE_REQUIRED = 2;
+  BAD_STATE = 3;
+  NOT_IMPLEMENTED = 4;
+  SERVER_BUSY = 5;
+  UNAUTHENTICATED = 6;
+}
+message Hello { string client_name = 1; }
+message HelloReply {
+  string server_name = 1;
+  uint32 protocol_version = 2;
+  bool diagnostic_only = 3;
+}
+message Ping { uint64 nonce = 1; }
+message Echo { string text = 1; }
+message Error { string description = 1; }
+
+message Envelope {
+  MessageType type = 1;
+  uint64 request_id = 2;
+  bytes message_id = 3;
+  uint64 sender_id = 4;
+  uint64 receiver_id = 5;
+  uint64 conversation_id = 6;
+  int64 timestamp_ms = 7;
+  ErrorCode error_code = 8;
+  oneof body {
+    Hello hello = 10;
+    HelloReply hello_reply = 11;
+    Ping ping = 12;
+    Ping pong = 13;
+    Echo echo_request = 14;
+    Echo echo_response = 15;
+    Error error = 16;
+  }
+}

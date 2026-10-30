@@ -1,0 +1,31 @@
+diff --git a/muduo/net/TcpServer.cc b/muduo/net/TcpServer.cc
+index 9ee33ab..9268f10 100644
+--- a/muduo/net/TcpServer.cc
++++ b/muduo/net/TcpServer.cc
+@@ -68,6 +68,12 @@ void TcpServer::start()
+   }
+ }
+ 
++void TcpServer::stopAccepting()
++{
++  loop_->assertInLoopThread();
++  acceptor_.reset();
++}
++
+ void TcpServer::newConnection(int sockfd, const InetAddress& peerAddr)
+ {
+   loop_->assertInLoopThread();
+diff --git a/muduo/net/TcpServer.h b/muduo/net/TcpServer.h
+index 247d928..b5f3a38 100644
+--- a/muduo/net/TcpServer.h
++++ b/muduo/net/TcpServer.h
+@@ -74,6 +74,9 @@ class TcpServer : noncopyable
+   /// Thread safe.
+   void start();
+ 
++  // Final stop. Call in the owner EventLoop pending-functor phase.
++  void stopAccepting();
++
+   /// Set connection callback.
+   /// Not thread safe.
+   void setConnectionCallback(const ConnectionCallback& cb)

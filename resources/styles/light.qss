@@ -1,0 +1,33 @@
+QWidget { font-family: 'Microsoft YaHei UI', 'Noto Sans CJK SC', sans-serif; font-size: 13px; color: #292d33; }
+QWidget#mainWindow, QWidget#emptyPage, QWidget#chatPage { background: #f5f5f5; }
+QWidget#titleBar { background: #269ff0; }
+QWidget#titleBar QLabel { color: white; background: transparent; }
+QWidget#navigation { background: #f5f5f5; border-right: 1px solid #e8e8e8; }
+QWidget#listPanel { background: #f5f5f5; border-right: 1px solid #e8e8e8; }
+QToolButton { background: transparent; border: 0; border-radius: 6px; padding: 0; }
+QToolButton:hover { background: #e7e9ec; }
+QToolButton:checked { background: #e2f0fc; }
+QWidget#titleBar QToolButton:hover { background: rgba(255,255,255,35); }
+QLineEdit { background: #eaeaea; border: 1px solid transparent; border-radius: 7px; padding: 5px 8px; selection-background-color: #269ff0; }
+QLineEdit:focus { border-color: #78bdf4; background: #fff; }
+QListWidget { background: transparent; border: 0; outline: none; }
+QScrollArea { background: transparent; border: 0; }
+QScrollBar:vertical { background: transparent; width: 6px; margin: 2px 0; }
+QScrollBar::handle:vertical { background: #d1d3d6; border-radius: 3px; min-height: 30px; }
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical { height: 0; }
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical { background: transparent; }
+QWidget#chatHeader { border-bottom: 1px solid #e7e7e7; background: #f7f7f7; }
+QLabel#chatTitle { font-size: 17px; font-weight: 600; }
+QLabel#subTitle { color: #93999f; font-size: 11px; }
+QLabel#notice { color: #9a9fa5; font-size: 11px; padding: 7px; background: #f0f2f4; }
+QWidget#composer { background: #fafafa; border-top: 1px solid #e5e5e5; }
+QPlainTextEdit { background: transparent; border: 0; padding: 2px 4px; font-size: 14px; selection-background-color: #a5d8ff; }
+QPushButton { border: 0; border-radius: 5px; padding: 7px 20px; background: #e9ebee; }
+QPushButton#sendButton { color: white; background: #169bf3; min-width: 54px; }
+QPushButton#sendButton:hover { background: #0786df; }
+QPushButton#sendButton:disabled { background: #d9eafb; color: #a3c6e5; }
+QMenu { background: white; border: 1px solid #e5e8ec; border-radius: 7px; padding: 5px; }
+QMenu::item { padding: 8px 24px 8px 16px; border-radius: 4px; }
+QMenu::item:selected { background: #eaf4fe; color: #168fe3; }
+QMenu::separator { height: 1px; background: #eceef0; margin: 4px 8px; }
+QDialog { background: #f7f8fa; }
